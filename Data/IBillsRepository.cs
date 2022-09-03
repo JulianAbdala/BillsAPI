@@ -6,20 +6,12 @@ namespace RatingAPI.Data
     public interface IBillsRepository
     {
         public IEnumerable<Bills> GetBills();
-        public Bills? GetBills(int idProduct);
-        public void AddBills(Bills product);
-        public void DeleteBills(int productId);
-        public void UpdateBills(Bills product);
+        public Bills? GetBills(int idBills);
+        public void AddBills(Bills bills);
+        public void DeleteBills(int billId);
+        public void UpdateBills(Bills bills);
         public bool SaveChange();
+        public IEnumerable<Bills> SearchBillsByName(string name);
+        public bool BillByNameExists(string name);
     }
 }
-
-
-/*//bool BillExists(int idBills);
-        void CreateBill(Bills bills);
-        public IEnumerable<Bills> GetBills();
-        public Bills? GetBills(int idBills);
-        //public IEnumerable<Bills> SearchBillsByName(string name);
-        bool GuardarCambios();
-        //bool BillByNameExists(string name);
-        void KillBill(int billsId);*/

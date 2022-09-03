@@ -23,5 +23,23 @@ namespace RatingAPI.Data
             {
                 return (_context.SaveChanges() >= 0);
             }
-        }
+            public User? GetUser(int userId)
+            {
+                return _context.User.FirstOrDefault(p => p.Id == userId);
+            }
+            public IEnumerable<User> GetUser()
+            {
+            return _context.User.OrderBy(x => x.Id).ToList(); ;
+            }
+            public void AddUser(User user)
+            {
+                _context.User.Add(user);
+            }
+            public void DeleteUser(int userId)
+            {
+            var user = _context.User.Find(userId);
+            if (user != null)
+                _context.User.Remove(user);
+            }
+    }
 }

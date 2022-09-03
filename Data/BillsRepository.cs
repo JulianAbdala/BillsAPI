@@ -13,11 +13,11 @@ namespace RatingAPI.Data
         private readonly BillsContext _context;
         public BillsRepository(BillsContext context)
         {
-            _context = context; //acceso a la db
+            _context = context; 
         }
-        public Bills? GetBills(int productId)
+        public Bills? GetBills(int billId)
         {
-            return _context.Bills.FirstOrDefault(p => p.Id == productId);
+            return _context.Bills.FirstOrDefault(p => p.Id == billId);
         }
 
         public IEnumerable<Bills> GetBills()
@@ -25,11 +25,11 @@ namespace RatingAPI.Data
             return _context.Bills.OrderBy(x => x.Id).ToList(); ;
         }
 
-        public void DeleteBills(int productId)
+        public void DeleteBills(int billId)
         {
-            var product = _context.Bills.Find(productId);
-            if (product != null)
-                _context.Bills.Remove(product);
+            var bill = _context.Bills.Find(billId);
+            if (bill != null)
+                _context.Bills.Remove(bill);
         }
 
         public void AddBills(Bills bills)
@@ -45,6 +45,14 @@ namespace RatingAPI.Data
         public void UpdateBills(Bills bills)
         {
             _context.Entry(bills).State = EntityState.Modified;
+        }
+        public IEnumerable<Bills> SearchBillsByName(string name)
+        {
+            return _context.Bills.Where(b => b.Nombre == name).ToList();
+        }
+        public bool BillByNameExists(string name)
+        {
+            return _context.Bills.Where(c => c.Nombre == name).Any();
         }
 
     }

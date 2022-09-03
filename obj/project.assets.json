@@ -1798,19 +1798,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Turco\\.nuget\\packages\\": {}
+    "C:\\Users\\julia\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Turco\\Desktop\\RatingAPIv3.0\\RatingAPI.csproj",
+      "projectUniqueName": "C:\\SourceCode\\FacturaApp API\\BillsAPI\\RatingAPI.csproj",
       "projectName": "RatingAPI",
-      "projectPath": "C:\\Users\\Turco\\Desktop\\RatingAPIv3.0\\RatingAPI.csproj",
-      "packagesPath": "C:\\Users\\Turco\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Turco\\Desktop\\RatingAPIv3.0\\obj\\",
+      "projectPath": "C:\\SourceCode\\FacturaApp API\\BillsAPI\\RatingAPI.csproj",
+      "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
+      "outputPath": "C:\\SourceCode\\FacturaApp API\\BillsAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Turco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1881,7 +1881,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -7,6 +7,6 @@ namespace RatingAPI.Services
         IEnumerable<BillsDto> GetBills();
         BillsDto? GetBills(int id);
         BillsDto AddBills(PostBillsDto postBillsDto);
-        public void DeleteBills(int productId);
+        public void DeleteBills(int billId);
     }
 }

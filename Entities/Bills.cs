@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-// Agregar mas items a Bills: Se ponen debajo lo que se agrega, Consola, add-migration + nombre descriptivo.
 namespace RatingAPI.Entities
 
 {

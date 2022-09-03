@@ -17,26 +17,26 @@ namespace RatingAPI.Services
 
         public IEnumerable<BillsDto> GetBills()
         {
-            var products = _billsRepository.GetBills();
-            return _mapper.Map<IEnumerable<BillsDto>>(products);
+            var bills = _billsRepository.GetBills();
+            return _mapper.Map<IEnumerable<BillsDto>>(bills);
         }
 
         public BillsDto? GetBills(int id)
         {
-            var product = _billsRepository.GetBills(id);
-            return _mapper.Map<BillsDto?>(product);
+            var bill = _billsRepository.GetBills(id);
+            return _mapper.Map<BillsDto?>(bill);
         }
 
         public BillsDto AddBills(PostBillsDto postBillsDto)
         {
-            var newProduct = _mapper.Map<Bills>(postBillsDto);
+            var newbill = _mapper.Map<Bills>(postBillsDto);
 
-            return _mapper.Map<BillsDto>(newProduct);
+            return _mapper.Map<BillsDto>(newbill);
         }
 
-        public void DeleteBills(int productId)
+        public void DeleteBills(int billId)
         {
-            _billsRepository.DeleteBills(productId);
+            _billsRepository.DeleteBills(billId);
             _billsRepository.SaveChange();
         }
 

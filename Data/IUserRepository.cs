@@ -7,5 +7,9 @@ namespace RatingAPI.Data
     {
         public User? ValidateUser(AuthenticationRequestBody authRequestBody);
         public bool SaveChange();
+        public User? GetUser(int userId);
+        public IEnumerable<User> GetUser();
+        public void DeleteUser(int userId);
+        public void AddUser(User user);
     }
 }

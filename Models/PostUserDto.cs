@@ -1,24 +1,20 @@
 ﻿using RatingAPI.Enums;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RatingAPI.Entities
+namespace RatingAPI.Models
 {
-    public class User
+    public class PostUserDto
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        [Required(ErrorMessage = "Agregá un nombre")]
         [MaxLength(20)]
         public string? Name { get; set; }
         [MaxLength(20)]
         public string? SurName { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Agregue su password con mas de 8 caracteres")]
         [MinLength(8)]
         public string Password { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Agregue un nick")]
+        [MaxLength(20)]
         public string UserName { get; set; }
-        public Permissions UserType { get; set; }
-
     }
 }
