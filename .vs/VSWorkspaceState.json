@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Controllers",
+    "\\DBContext",
+    "\\Entities",
+    "\\Mapper",
+    "\\Services"
+  ],
+  "SelectedNode": "\\DBContext\\BillsContext.cs",
+  "PreviewInSolutionExplorer": false
+}
